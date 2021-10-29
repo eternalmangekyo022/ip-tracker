@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root
+{
+    --very-dark-grey: hsl(0, 0%, 17%);
+    --dark-grey: hsl(0, 0%, 59%);
+}
+
+*:not(.attribution *)
+{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+body
+{
+    height: 100vh;
+}
+.main-wrapper
+{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1440px;
+    height: 98vh;
+    overflow-y: hidden;
+}
+#map
+{
+    height: 100%;
+}
+.ip-container
+{
+    height: 250px;
+}
+.ip-section
+{
+    width: 100%;
+    height: inherit;
+    display: inline-flex;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ip-section h2
+{
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    transform: translate(-50%);
+    font-size: 30px;
+    color: white;
+    
+}
+.ip-section form
+{
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    width: 50%;
+}
+
+.ip-section form *
+{
+    --height: 60px;
+    height: var(--height);
+    border: none;
+    border-radius: 12px;
+}
+
+.ip-section form input[type=text]
+{  
+    grid-column: 1 / 8;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.ip-section form input[type=submit]
+{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: calc(var(--height) + 3px);
+    background-color: black;
+    color: white;
+}
+
+.found-information-grid
+{
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    width: 80%;
+    height: 150px;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    background-color: white;
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.found-information-grid div label
+{
+    height: 2rem;
+    font-size: .8rem;
+    color: grey;
+    position: relative;
+    left: 10%;
+    top: 20%;
+}
+.found-information-grid div span
+{
+    display: block;
+    width: fit-content;
+    height: 1.5rem;
+    position: relative;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 25px;
+}
+.search-ip-form input[type=submit]
+{
+    transition: .3s;
+}
+.search-ip-form input[type=submit]:hover
+{
+    cursor: pointer;
+    background-color: var(--dark-grey);
+    transition: .3s;
+}
+
